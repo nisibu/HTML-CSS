@@ -1,1 +1,99 @@
 @charset "utf-8";
+
+body {
+    color: #1E1E1E;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.inner {
+    max-width: 1260px;
+    width: 86.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+header {
+    margin: 40px 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* recruiting */
+.recruiting .position-main {
+    position: relative;
+}
+
+.recruiting dl {
+    position: absolute;
+    top: 0;
+}
+
+.recruiting dt {
+    font-size: 18px;
+}
+
+.recruiting dd {
+    font-size: 36px;
+}
+
+/* discusstion */
+.discusstion h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.discusstion h2::before {
+    content: "KUMONが向き合うもの";
+    display: block;
+    margin: 100px auto 0;
+    width: 194px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background: #72C9F3;
+}
+
+.discusstion h2::after {
+    content: "";
+    display: block;
+    margin: 0 auto 50px;
+    width: 80px;
+    border-bottom: 1px solid #1E1E1E;
+}
+
+/* position-post */
+.position-post {
+    position: relative;
+}
+
+.discusstion article p {
+    position: absolute;
+    padding: 20px;
+    bottom: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* discusstion */
+.discusstion ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.discusstion li {
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #F5F5F5;
+}
