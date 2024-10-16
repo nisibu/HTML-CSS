@@ -1,1 +1,247 @@
 @charset "utf-8";
+
+/* base
+---------------------------*/
+body {
+    color: #888888;
+    line-height: 1.71;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* time */
+.time {
+    padding-left: 26px;
+    color: #BBBBBB;
+    font-size: 12px;
+    background: url(./images/icon_time.png)no-repeat left center;
+}
+
+/* btn
+------------------------------ */
+.btn {
+    display: block;
+    margin-left: auto;
+    width: 160px;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background: #FA6980;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn--info {
+    background: #202124;
+}
+
+/* module
+----------------------------*/
+/* unit */
+.unit__catch {
+    margin-bottom: 10px;
+    color: #FA6980;
+    font-style: oblique;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.unit__title {
+    margin-bottom: 15px;
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.27;
+}
+
+.unit__title--border {
+    padding-bottom: 10px;
+    border-bottom: #DDDDDD solid 1px;
+}
+
+.unit__text {
+    margin-bottom: 20px;
+}
+
+/* card */
+.card__body {
+    padding: 35px;
+    background: #fff;
+}
+
+.card__title {
+    margin-bottom: 15px;
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.27;
+}
+
+.card__text {
+    margin-bottom: 25px;
+}
+
+/* header
+------------------------------ */
+.header {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.header__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* news
+---------------------------- */
+.news {
+    padding: 60px 0;
+}
+
+.news__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news__title {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    color: #202124;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.29;
+    border-left: 10px solid #FA6980;
+}
+
+.news__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: -60px;
+}
+
+.news__item {
+    width: 47.5%;
+    margin-bottom: 60px;
+}
+
+/* trending
+------------------------*/
+.trending {
+    padding: 60px 0;
+    background: #F6F6F6;
+}
+
+.trending__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trending__title {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    color: #202124;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.29;
+    border-left: 10px solid #FA6980;
+}
+
+.trending__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.trending__item {
+    width: 47.5%;
+}
+
+/* footer */
+.footer {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background: #202124;
+}
+
+.footer__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__copy {
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+/* about
+-------------------------- */
+.post {
+    padding: 60px 0;
+}
+
+.post__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post__item {
+    margin-bottom: 40px;
+}
+
+/* discovery
+------------------------------ */
+.discovery {
+    padding: 60px 0;
+    background: #F6F6F6;
+}
+
+.discovery__inner {
+    max-width: 800px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discovery__title {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    color: #202124;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.29;
+    border-left: 10px solid #FA6980;
+}
+
+.discovery__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.discovery__item {
+    width: 30%;
+}
