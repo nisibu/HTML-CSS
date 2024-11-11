@@ -4,7 +4,19 @@ $color-main: #000;
 $color-text: #5A5A5A;
 $color-accent: #ED145B;
 
-@mixin m-inner($mw: 1300px, $w: (900/1200)*100%) {
+$breakpoints: (
+    "tablet": "screen and (min-width: 560px)",
+    "desktop": "screen and (min-width: 900px)",
+    "full": "screen and (min-width: 1300px)",
+    ) !default;
+
+@mixin m-query($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin m-inner($mw: 1300px, $w: (900/1300)*100%) {
     max-width: $mw;
     width: $w;
     margin-left: auto;
@@ -18,8 +30,21 @@ $color-accent: #ED145B;
     align-items: $a;
 }
 
+@mixin m-mainTitle {
+    margin: 80px 0 50px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: (46/38
+    );
+color: #2B2B2B;
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
     font-size: 14px;
     line-height: (24/14);
     letter-spacing: (25/1000);
@@ -34,8 +59,11 @@ img {
 
 /*header*/
 .header {
-    // position: absolute;
-    // display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+
     padding: 40px 0;
     background-color: $color-main;
 
@@ -58,6 +86,7 @@ img {
 
 /*nav*/
 .nav {
+
     &__list {
         @include m-flex();
     }
@@ -74,6 +103,42 @@ img {
     }
 }
 
+/*post*/
+.post {
+    &__pic img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &__title {
+        margin-top: 25px;
+        display: block;
+        padding: 7px 0;
+        width: 237px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: (20/16);
+        color: #fff;
+        background-color: $color-main ;
+    }
+
+    &__text {
+        margin: 20px 0 60px;
+    }
+
+    @include m-query(desktop) {
+        &__pic img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
 /*btn*/
 .btn {
     display: block;
@@ -82,12 +147,22 @@ img {
     text-align: center;
     color: #fff;
     background-color: $color-accent;
+
+    @include m-query(desktop) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.btn--testimonials {
+    margin: 0 auto;
+    background-color: #EDAA14;
 }
 
 /*index.html
 -----------------------------------------*/
 .about {
-    padding: 150px 0;
+    padding: 250px 0;
     background: url(../images/bg_mainvisual.png)no-repeat center/cover;
 
     &__inner {
@@ -108,5 +183,97 @@ img {
 
     &__active {
         color: $color-accent;
+    }
+
+    @include m-query(desktop) {
+        text-align: center;
+    }
+}
+
+/*updates*/
+.updates {
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        @include m-mainTitle();
+    }
+
+    @include m-query(desktop) {
+        &__list {
+            @include m-flex();
+        }
+
+        &__item {
+            width: (260/900)*100%;
+        }
+    }
+}
+
+/*about.html
+------------------------------------*/
+/*services*/
+.services {
+    padding: 100px 0 80px;
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        @include m-mainTitle();
+    }
+
+    &__list :nth-child(odd) {
+        margin-right: auto;
+    }
+
+    &__item {
+        margin-bottom: 60px;
+    }
+
+    @include m-query(desktop) {
+        &__list {
+            @include m-flex();
+        }
+
+        &__item {
+            width: (420/900)*100%;
+        }
+    }
+}
+
+/*testimonials*/
+.testimonials {
+    background: url(../images/bg_testimonials.png);
+    padding: 80px 0;
+
+
+    &__inner {
+        @include m-inner();
+        text-align: center;
+        background: #fff;
+        padding: 50px;
+    }
+
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 38px;
+        font-weight: bold;
+        line-height: (46/38);
+        color: #2B2B2B;
+    }
+
+    &__text {
+        display: inline-block;
+        margin: 40px 0;
+
+        .com {
+            margin-top: 25px;
+        }
     }
 }
