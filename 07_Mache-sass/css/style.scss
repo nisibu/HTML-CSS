@@ -226,7 +226,7 @@ img {
         @include m-mainTitle();
     }
 
-    &__list :nth-child(odd) {
+    &:nth-child(odd) {
         margin-right: auto;
     }
 

@@ -194,7 +194,7 @@ img {
   line-height: 1.2105263158;
   color: #2B2B2B;
 }
-.services__list :nth-child(odd) {
+.services:nth-child(odd) {
   margin-right: auto;
 }
 .services__item {
