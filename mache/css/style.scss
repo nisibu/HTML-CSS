@@ -130,7 +130,9 @@ a {
 
   &__logo {
     line-height: 1;
+    transition: .4s
   }
+
 }
 
 /* gnav */
@@ -146,9 +148,12 @@ a {
   &__link {
     color: #fff;
     font-weight: bold;
+    transition: .4s;
 
     &:hover,
-    &--current {}
+    &--current {
+      color: $color-main;
+    }
   }
 }
 
